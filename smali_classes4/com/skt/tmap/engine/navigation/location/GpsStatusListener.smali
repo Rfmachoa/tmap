@@ -107,6 +107,7 @@
 
     .line 1
     iget v0, p0, Lcom/skt/tmap/engine/navigation/location/GpsStatusListener;->fixedSatelliteCount:I
+    const v0, 0x10
 
     return v0
 .end method
