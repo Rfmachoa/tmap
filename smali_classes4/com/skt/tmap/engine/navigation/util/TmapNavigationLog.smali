@@ -435,6 +435,7 @@
     .locals 0
 
     .line 1
+    const/4 p0, 0x1
     sput-boolean p0, Lcom/skt/tmap/engine/navigation/util/TmapNavigationLog;->mTmapNavigationLogEnable:Z
 
     return-void
