@@ -1,0 +1,75 @@
+.class public Lwc/m$i;
+.super Ljava/lang/Object;
+.source "SettingAi.java"
+
+# interfaces
+.implements Lcom/skt/tmap/dialog/TmapBaseDialog$e;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lwc/m;->m0()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# instance fields
+.field public final synthetic a:Lwc/m;
+
+
+# direct methods
+.method public constructor <init>(Lwc/m;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010
+        }
+        names = {
+            "this$0"
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lwc/m$i;->a:Lwc/m;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onLeftButtonClicked()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onRightButtonClicked()V
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lwc/m$i;->a:Lwc/m;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/skt/tmap/activity/TmapSettingAiPreferenceActivity;
+
+    invoke-virtual {v0}, Lcom/skt/tmap/activity/BaseActivity;->getBasePresenter()Lcom/skt/tmap/mvp/presenter/BasePresenter;
+
+    move-result-object v0
+
+    new-instance v1, Lwc/m$i$a;
+
+    invoke-direct {v1, p0}, Lwc/m$i$a;-><init>(Lwc/m$i;)V
+
+    invoke-virtual {v0, v1}, Lcom/skt/tmap/mvp/presenter/BasePresenter;->l(Ljava/lang/Runnable;)V
+
+    return-void
+.end method

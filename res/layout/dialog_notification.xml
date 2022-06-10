@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="#ffffffff" android:paddingTop="10.0dip" android:layout_width="290.0dip" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="18.0dip" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center_vertical" android:id="@id/dialogTitle" android:paddingLeft="25.0dip" android:paddingRight="25.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" />
+        <View android:id="@id/emptyView" android:layout_width="fill_parent" android:layout_height="5.0dip" />
+        <TextView android:textSize="14.0dip" android:textColor="#ff000000" android:id="@id/dialogContent" android:paddingLeft="25.0dip" android:paddingRight="25.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:lineSpacingExtra="3.0dip" />
+        <LinearLayout android:gravity="center|right" android:orientation="horizontal" android:id="@id/dialogButtonArea" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:minHeight="54.0dip">
+            <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:id="@id/cancel" android:background="@drawable/selector_dialog_click_event" android:visibility="gone" android:layout_width="55.0dip" android:layout_height="34.0dip" android:layout_marginRight="10.0dip" android:text="@string/rp_cancel" />
+            <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="#ff000000" android:gravity="center" android:id="@id/submit" android:background="@drawable/selector_dialog_click_event" android:visibility="gone" android:layout_width="55.0dip" android:layout_height="34.0dip" android:text="@string/rp_submit" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

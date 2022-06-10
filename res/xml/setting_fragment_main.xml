@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/setting_main_sound" app:isTextViewDivider="false">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/setting_main_sound_level" app:clickLogActionId="tap.soundcontrol" app:isTextViewDivider="false">
+            <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapMainSoundSettingActivity">
+                <extra android:name="EXTRA_TITLE" android:value="@string/setting_main_sound_level" />
+            </intent>
+        </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/setting_main_sound_safe_drive_guide" android:key="@string/feature_minimumVoiceGuidanceOnDriving" android:defaultValue="N" app:clickLogActionId="tap.voice_category" app:entries="@array/sound_safe_drive_minimum_mode" app:entryValues="@array/setting_value_string_yn_type" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type">
+            <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapSettingSoundActivity" />
+        </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/gnb_tmap_voice_star" android:key="@string/star_voice_product_name" android:defaultValue="@string/tmap_main_setting_item_female_voice_type" app:clickLogActionId="tap.voice" app:groupName="@string/tmap_star_voice_preference" app:isPreferenceValueType="@string/string_type">
+            <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapStarVoiceKtActivity" />
+        </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/setting_main_sound_auto_sound_control" android:key="@string/feature_musicVolumeAutoControlOnDriving" android:defaultValue="Y" app:clickLogActionId="tap.autovolume_control" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" />
+    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/tmap_main_setting_item_map_setting">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/tmap_main_setting_item_map_driving_map_text_size" android:key="@string/feature_mapFontSize" android:defaultValue="NORMAL" app:clickLogActionId="tap.map_fontsize" app:entries="@array/setting_main_display_poi_fontsize_choices" app:entryValues="@array/setting_main_display_poi_fontsize_choices_value" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" app:isTextViewDivider="false">
+            <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapMainSettingDisplayDetailActivity">
+                <extra android:name="nPageNum" android:value="9" />
+            </intent>
+        </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
+        <com.skt.tmap.setting.fragment.customPreference.CustomDialogPreference android:title="@string/tmap_main_setting_item_screen_address_type" android:key="@string/feature_addressDisplayType" android:defaultValue="1" app:clickLogActionId="tap.addressmode" app:entries="@array/setting_screen_address_type" app:entryValues="@array/setting_screen_address_type_value" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" />
+        <com.skt.tmap.setting.fragment.customPreference.CustomDialogPreference android:title="@string/tmap_main_setting_item_map_driving_map_auto_set_night_mode" android:key="@string/feature_useMapNightMode" android:defaultValue="0" app:clickLogActionId="tap.map_nightmode" app:entries="@array/setting_screen_night_mode" app:entryValues="@array/setting_screen_night_mode_value" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" />
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/tmap_main_setting_item_map_driving_map_zoom_level" android:key="@string/feature_useScaleMap" android:defaultValue="true" app:clickLogActionId="tap.map_speedreact" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" />
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/tmap_main_setting_item_map_driving_map_show_route_traffic" android:key="@string/feature_trafficInfoDisplayAlways" android:defaultValue="N" app:clickLogActionId="tap.map_trafficinfoline" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" />
+    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/tmap_main_setting_item_screen_setting">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/tmap_main_setting_item_screen_car_icon" app:isTextViewDivider="false">
+            <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapMainSettingDisplayDetailActivity">
+                <extra android:name="nPageNum" android:value="2" />
+            </intent>
+        </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/tmap_main_setting_item_map_junction_image_type" android:key="@string/feature_junctionImageType" android:defaultValue="FULL" app:clickLogActionId="tap.juntionimagetype" app:entries="@array/setting_main_junction_image_type_list" app:entryValues="@array/setting_main_junction_image_type_list_value" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type">
+            <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapMainSettingDisplayDetailActivity">
+                <extra android:name="nPageNum" android:value="10" />
+            </intent>
+        </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/tmap_main_setting_item_screen_highway_board" android:key="@string/feature_highwayBoardTraffic" android:defaultValue="Y" app:clickLogActionId="tap.vms" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" />
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/tmap_main_setting_item_screen_auto_research" android:key="@string/feature_realTimeAutoReroute" android:defaultValue="Y" app:clickLogActionId="tap.realtime_rp" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" />
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/tmap_main_setting_item_screen_tbt_popup" android:key="@string/feature_showTbtPopUp" android:defaultValue="Y" app:clickLogActionId="tap.minitbt" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" app:isUseValue="false" />
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/tmap_main_setting_item_screen_auto_orientation" android:key="@string/feature_screenAutoRotationOnDriving" android:defaultValue="N" app:clickLogActionId="tap.screenrotation" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" />
+    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/tmap_main_setting_item_favorite_route_setting">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/setting_main_auto_make_favorite_route" android:key="@string/feature_autoMakeFavoriteRoute" android:defaultValue="Y" app:clickLogActionId="tap.myroute_auto" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" app:isTextViewDivider="false" />
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/setting_main_auto_make_favorite_route_info" android:key="@string/setting_favorite_route_auto_make" app:clickLogActionId="tap.myroute_manual" app:isUseValue="false" />
+    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/blackbox">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/blackbox" android:key="@string/feature_useBlackbox" android:defaultValue="N" app:clickLogActionId="tap.blackbox" app:entries="@array/setting_common_use" app:entryValues="@array/setting_value_string_yn_type" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" app:isTextViewDivider="false">
+            <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapBlackBoxSettingPreferenceActivity" />
+        </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
+    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/tmap_main_setting_item_alarm_setting">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/setting_push_noti_notification" android:key="@string/main_setting_alarm_category" app:isTextViewDivider="false">
+            <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapPushSettingPreferenceActivity" />
+        </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/tmap_main_setting_disaster_message" android:key="@string/setting_disaster_message" app:clickLogActionId="tap.emergency_alerts" app:isPreferenceVisible="false">
+            <intent android:targetPackage="com.google.android.cellbroadcastreceiver" android:targetClass="com.android.cellbroadcastreceiver.CellBroadcastSettings" />
+        </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
+    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/tmap_main_setting_item_nugu_setting">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/txt_setting_ai_drive_title" android:key="@string/feature_useNugu" android:defaultValue="Y" app:clickLogActionId="tap.nugusetting" app:entries="@array/setting_common_use" app:entryValues="@array/setting_value_string_yn_type" app:groupName="@string/user_settings_info" app:isPreferenceValueType="@string/string_type" app:isTextViewDivider="false" />
+    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/tmap_main_setting_item_lab_setting" android:key="@string/lab_category" app:isPreferenceVisible="false">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference android:title="@string/tmap_main_setting_lab_menu" android:key="@string/setting_lab_menu" app:clickLogActionId="tab.laboratory" app:isPreferenceVisible="false" app:isTextViewDivider="false">
+            <intent android:targetPackage="@string/package_name" android:targetClass="com.skt.tmap.activity.TmapLabMenuSettingPreferenceActivity" />
+        </com.skt.tmap.setting.fragment.customPreference.CustomSubMenuPreference>
+    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+    <com.skt.tmap.setting.fragment.customLayout.SettingMainFooterPreference android:layout="@layout/setting_environment_footer" android:title="@string/setting_title_footer" android:key="@string/setting_title_footer" app:isUseValue="false" />
+</PreferenceScreen>

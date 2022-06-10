@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/ssolib_dialog_popup_layout" android:background="@drawable/ssolib_img_popup" android:layout_width="300.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="right" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageButton android:id="@id/ssolib_popup_top_close" android:background="@drawable/ssolib_btn_popup_top_close" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginTop="13.0dip" android:layout_marginRight="8.0dip" android:contentDescription="@string/ssolib_voice_close_popup" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_horizontal" android:id="@id/ssolib_popup_icon" android:focusable="true" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="8.0dip" android:src="@drawable/ssolib_img_popup_icon_notice" android:contentDescription="@string/ssolib_voice_notice" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="260.0dip" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:layout_marginBottom="52.0dip">
+        <TextView android:textSize="13.0dip" android:textStyle="bold" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:id="@id/ssolib_popup_textview_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:fontFamily="sans-serif-medium" />
+        <TextView android:textSize="13.0dip" android:textColor="#ff000000" android:layout_gravity="center_horizontal" android:id="@id/ssolib_popup_textview_body" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="5.0dip" android:fontFamily="sans-serif" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/button_ok_cancel_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="22.0dip">
+        <Button android:textSize="16.0dip" android:id="@id/ssolib_popup_btn_left" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_weight="1.0" android:fontFamily="sans-serif" />
+        <Button android:textSize="16.0dip" android:id="@id/ssolib_popup_btn_right" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_weight="1.0" android:fontFamily="sans-serif" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/color_e523232a" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/ai_main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/ai_gradient_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+        <ImageButton android:id="@id/ai_sms_send_close_button" android:background="@android:color/transparent" android:layout_width="@dimen/tmap_45dp" android:layout_height="@dimen/tmap_45dp" android:src="@drawable/ai_btn_close_selector" android:layout_alignParentRight="true" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ai_sms_send_top_layout" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_48dp">
+            <ImageView android:id="@id/ai_sms_send_top_slide_image" android:background="@drawable/btn_arrow_slide_up" android:layout_width="@dimen/tmap_115dp" android:layout_height="@dimen/tmap_45dp" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/tmap_25dp" android:layout_marginRight="@dimen/tmap_25dp" android:layout_below="@id/ai_sms_send_close_button">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_0dp" android:layout_marginLeft="@dimen/tmap_25dp" android:layout_marginRight="@dimen/tmap_25dp" android:layout_marginBottom="@dimen/tmap_41dp" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/tmap_24dp" android:textColor="@color/color_ccffffff" android:gravity="center_horizontal" android:id="@id/ai_sms_send_recipient_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <TextView android:scrollbarAlwaysDrawVerticalTrack="true" android:textSize="@dimen/tmap_24dp" android:textColor="@color/color_ffffff" android:gravity="bottom|center" android:id="@id/ai_sms_send_content_text" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_12dp" android:lineSpacingExtra="@dimen/tmap_6dp" android:scrollbarFadeDuration="0" />
+            </LinearLayout>
+            <HorizontalScrollView android:layout_gravity="center_horizontal" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_60dp" android:fillViewport="true">
+                <LinearLayout android:orientation="horizontal" android:id="@id/ai_sms_send_button_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+                    <TextView android:textSize="@dimen/tmap_19dp" android:textColor="@color/color_ffffff" android:gravity="center" android:id="@id/ai_sms_send_cancel_btn" android:background="@drawable/ai_grey_button_selector" android:paddingLeft="@dimen/tmap_12dp" android:paddingRight="@dimen/tmap_12dp" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_45dp" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/tmap_19dp" android:textColor="@color/color_ffffff" android:gravity="center" android:id="@id/ai_sms_send_modify_btn" android:background="@drawable/ai_grey_button_selector" android:paddingLeft="@dimen/tmap_12dp" android:paddingRight="@dimen/tmap_12dp" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_45dp" android:layout_marginLeft="@dimen/tmap_12dp" android:layout_weight="1.3" />
+                    <TextView android:textSize="@dimen/tmap_19dp" android:textColor="@color/color_ffffff" android:gravity="center" android:id="@id/ai_sms_send_confirm_text" android:background="@drawable/ai_red_button_selector" android:paddingLeft="@dimen/tmap_12dp" android:paddingRight="@dimen/tmap_12dp" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_45dp" android:layout_marginLeft="@dimen/tmap_12dp" android:layout_weight="1.3" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ai_sms_send_lottie_layout" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_78dp">
+                <com.airbnb.lottie.LottieAnimationView android:id="@id/ai_sms_send_lottie_view" android:layout_width="@dimen/tmap_155dp" android:layout_height="@dimen/tmap_60dp" android:layout_marginTop="@dimen/tmap_7dp" app:lottie_fileName="tts.json" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

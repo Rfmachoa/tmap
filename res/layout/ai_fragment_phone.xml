@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center" android:id="@id/ai_main_layout" android:background="@color/color_e523232a" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/ai_gradient_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ai_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/tmap_24dp" android:textColor="@color/color_ffffff" android:ellipsize="marquee" android:gravity="center" android:id="@id/ai_contents_text" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_weight="1.0" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ai_button_layout" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_41dp">
+                <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_ffffff" android:gravity="center" android:id="@id/button_start_call" android:background="@drawable/btn_call_g" android:layout_width="@dimen/tmap_103dp" android:layout_height="@dimen/tmap_41dp" android:text="@string/ai_button_start_call" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/button_end_call_color" android:gravity="center" android:id="@id/button_send_sms" android:background="@drawable/btn_call_w_selector" android:layout_width="@dimen/tmap_103dp" android:layout_height="@dimen/tmap_41dp" android:layout_marginLeft="@dimen/tmap_7dp" android:text="@string/ai_button_send_sms" android:layout_weight="1.0" />
+                <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_ffffff" android:gravity="center" android:id="@id/button_end_call" android:background="@drawable/btn_call_o" android:layout_width="@dimen/tmap_103dp" android:layout_height="@dimen/tmap_41dp" android:layout_marginLeft="@dimen/tmap_7dp" android:text="@string/ai_button_end_call" android:layout_weight="1.0" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/tmap_27dp" android:textColor="@color/white_color" android:ellipsize="marquee" android:gravity="center" android:id="@id/ai_contents_text_land" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_weight="1.0" />
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ai_lottie_layout" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_44dp">
+                <com.airbnb.lottie.LottieAnimationView android:id="@id/ai_lottie_view" android:layout_width="@dimen/tmap_120dp" android:layout_height="@dimen/tmap_40dp" app:lottie_fileName="tts.json" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

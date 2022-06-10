@@ -1,0 +1,46 @@
+.class public Lcom/skt/tmap/util/r0$d;
+.super Ljava/lang/Object;
+.source "SettingUtil.java"
+
+# interfaces
+.implements Lcom/skt/tmap/engine/navigation/network/NetworkRequester$OnComplete;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/skt/tmap/util/r0;->q(Landroid/app/Activity;Z)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onCompleteAction(Lcom/skt/tmap/engine/navigation/network/ndds/dto/ResponseDto;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0,
+            0x0
+        }
+        names = {
+            "resp",
+            "type"
+        }
+    .end annotation
+
+    return-void
+.end method

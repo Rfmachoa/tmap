@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="150" android:drawable="@drawable/img_slot_icon_fail" />
+    <item android:duration="200" android:drawable="@drawable/img_slot_icon_qmark" />
+    <item android:duration="200" android:drawable="@drawable/img_slot_icon_win" />
+    <item android:duration="200" android:drawable="@drawable/img_slot_icon_fail" />
+    <item android:duration="200" android:drawable="@drawable/img_slot_icon_qmark" />
+    <item android:duration="200" android:drawable="@drawable/img_slot_icon_fail" />
+    <item android:duration="200" android:drawable="@drawable/img_slot_icon_qmark" />
+    <item android:duration="200" android:drawable="@drawable/img_slot_icon_win" />
+    <item android:duration="200" android:drawable="@drawable/img_slot_icon_fail" />
+    <item android:duration="200" android:drawable="@drawable/img_slot_icon_qmark" />
+    <item android:duration="50" android:drawable="@drawable/img_slot_icon_win" />
+</animation-list>

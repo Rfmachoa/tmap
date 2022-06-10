@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/color_e523232a" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ai_gradient_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    <RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@id/ai_main_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ai_bottom_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <HorizontalScrollView android:layout_gravity="center_horizontal" android:id="@id/ai_sample_container_scroll" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:id="@id/ai_sample_container_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_40dp" />
+            </HorizontalScrollView>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/ai_lottie_layout" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_78dp">
+                <com.airbnb.lottie.LottieAnimationView android:id="@id/ai_lottie_view" android:layout_width="@dimen/tmap_155dp" android:layout_height="@dimen/tmap_60dp" android:layout_marginTop="@dimen/tmap_7dp" app:lottie_fileName="tts.json" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/tmap_25dp" android:layout_marginRight="@dimen/tmap_25dp" android:layout_above="@id/ai_bottom_layout">
+            <View android:layout_width="wrap_content" android:layout_height="@dimen/tmap_0dp" android:layout_weight="1.0" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/tmap_27dp" android:textColor="@color/white_color" android:gravity="bottom|center" android:id="@id/ai_contents_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:layout_centerInParent="true" android:lineSpacingExtra="@dimen/tmap_4dp" />
+                <TextView android:textSize="@dimen/tmap_21dp" android:textColor="@color/white_color" android:gravity="center" android:id="@id/ai_inventory_info_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/popup_hmi_voice_talk" android:layout_centerInParent="true" android:lineSpacingExtra="@dimen/tmap_13dp" />
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/ai_sample_text_layout" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="2.0">
+                <TextView android:textSize="@dimen/tmap_34dp" android:textColor="@color/white_color" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ai_sample_text_1st" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:lineSpacingExtra="@dimen/tmap_14dp" />
+            </LinearLayout>
+            <View android:id="@id/bottom_padding_view" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_0dp" android:layout_weight="1.0" />
+        </LinearLayout>
+        <ImageButton android:id="@id/close_button" android:background="@android:color/transparent" android:layout_width="@dimen/tmap_45dp" android:layout_height="@dimen/tmap_45dp" android:src="@drawable/ai_btn_close_selector" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

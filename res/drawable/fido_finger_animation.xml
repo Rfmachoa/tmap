@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_00" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_01" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_02" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_03" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_04" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_05" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_06" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_07" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_08" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_09" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_10" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_11" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_12" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_13" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_14" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_15" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_16" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_17" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_18" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_19" />
+    <item android:duration="0" android:drawable="@drawable/illust_fingerprint_20" />
+</animation-list>

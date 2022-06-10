@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/titlebarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tmap_common_titlebar" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/tabLayout" android:background="#ffdedede" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_52dp" android:layout_below="@id/titlebarLayout">
+        <RelativeLayout android:id="@id/timePredictionTabLayout" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/timePredictionTabArrow" android:background="@drawable/calendar_taparrow_nor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/color_bbbcbd" android:id="@id/timeTab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_time_prediction" android:layout_centerInParent="true" android:fontFamily="@font/skp_go_mm" />
+        </RelativeLayout>
+        <ImageView android:id="@id/tabLine" android:background="@color/color_e6e6e6" android:layout_width="@dimen/tmap_1dp" android:layout_height="fill_parent" />
+        <RelativeLayout android:id="@id/ScheduleTabLayout" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/ScheduleTabArrow" android:background="@drawable/calendar_taparrow_nor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/color_4b5054" android:id="@id/scheduleTab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_check_schedule" android:layout_centerInParent="true" android:fontFamily="@font/skp_go_mm" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/calendarBodyLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tabLayout">
+        <include layout="@layout/check_schedule_layout" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/timePickerBodyLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tabLayout">
+        <include layout="@layout/time_prediction_picker_layout" />
+    </RelativeLayout>
+    <View android:id="@id/header_shadow" android:background="@drawable/bg_sheet_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_7dp" android:layout_below="@id/titlebarLayout" />
+</RelativeLayout>

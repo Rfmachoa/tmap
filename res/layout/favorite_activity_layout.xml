@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:tag="layout/favorite_activity_layout_0" android:layout_width="fill_parent" android:layout_height="fill_parent" android:splitMotionEvents="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tmap_common_title_layout" />
+    <FrameLayout android:id="@id/favorite_root_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_layout" />
+    <FrameLayout android:id="@id/favorite_coach_layout" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/main_setting_gr_layout_title" android:background="@color/tmap_common_title_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_common_title_height">
+        <ImageButton android:id="@id/main_setting_gr_imagebutton_mainlist" android:background="@null" android:layout_width="@dimen/tmap_around_info_title_btn_height_width" android:layout_height="@dimen/tmap_around_info_title_btn_height_width" android:layout_marginLeft="@dimen/tmap_around_info_title_btn_margin_left" android:src="@drawable/btn_backpress_selector" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/tmap_common_title_txt_size" android:textColor="@color/tmap_common_title_txt_color" android:gravity="center" android:id="@id/main_setting_gr_textview_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/setting_route_choose_alternative_route" />
+    </RelativeLayout>
+    <ListView android:id="@id/main_setting_gr_listview_view" android:background="@drawable/tmap_common_list_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/main_setting_gr_layout_title" />
+    <RelativeLayout android:id="@id/main_setting_gr_layout_view" android:background="@drawable/tmap_common_list_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/main_setting_gr_layout_title" />
+</RelativeLayout>

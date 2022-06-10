@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <padding android:left="0.0dip" android:top="0.0dip" android:right="0.0dip" android:bottom="0.5dip" />
+            <solid android:color="@color/color_03000000" />
+            <corners android:radius="@dimen/tmap_28dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:left="0.0dip" android:top="0.0dip" android:right="0.0dip" android:bottom="0.5dip" />
+            <solid android:color="@color/color_08000000" />
+            <corners android:radius="@dimen/tmap_28dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:left="0.0dip" android:top="0.0dip" android:right="0.0dip" android:bottom="0.5dip" />
+            <solid android:color="@color/color_0d000000" />
+            <corners android:radius="@dimen/tmap_28dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:left="0.0dip" android:top="0.0dip" android:right="0.0dip" android:bottom="0.5dip" />
+            <solid android:color="@color/color_1a000000" />
+            <corners android:radius="@dimen/tmap_28dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:left="0.0dip" android:top="0.0dip" android:right="0.0dip" android:bottom="0.5dip" />
+            <solid android:color="@color/color_26000000" />
+            <corners android:radius="@dimen/tmap_28dp" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding android:left="0.0dip" android:top="0.0dip" android:right="0.0dip" android:bottom="0.5dip" />
+            <solid android:color="@color/color_33000000" />
+            <corners android:radius="@dimen/tmap_28dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/color_e0000000" />
+            <corners android:radius="@dimen/tmap_28dp" />
+        </shape>
+    </item>
+</layer-list>

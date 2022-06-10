@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="alarm_set_list">
+        <item>정시알람</item>
+        <item>출발 15분 전 알람</item>
+        <item>알람없음</item>
+    </string-array>
+    <array name="around_info_image_list">
+        <item>@drawable/ic_around_list_oil_station</item>
+        <item>@drawable/ic_around_list_garage</item>
+        <item>@drawable/ic_around_list_parking</item>
+        <item>@drawable/ic_around_list_bank</item>
+        <item>@drawable/ic_around_list_drugstore</item>
+        <item>@drawable/ic_around_list_shopping</item>
+        <item>@drawable/ic_around_list_market</item>
+        <item>@drawable/ic_around_list_restaurant</item>
+        <item>@drawable/ic_around_list_bnb</item>
+        <item>@drawable/ic_around_list_tour</item>
+        <item>@drawable/ic_around_list_traffic</item>
+    </array>
+    <string-array name="around_info_text_list">
+        <item>@string/tag_around_info_gas_station</item>
+        <item>@string/tag_around_info_garage</item>
+        <item>@string/tag_around_info_parking_lot</item>
+        <item>@string/tag_around_info_bank</item>
+        <item>@string/tag_around_info_hospital</item>
+        <item>@string/tag_around_info_shopping</item>
+        <item>@string/tag_around_info_supermarket</item>
+        <item>@string/tag_around_info_restaurant</item>
+        <item>@string/tag_around_info_hotel</item>
+        <item>@string/tag_around_info_tour</item>
+        <item>@string/tag_around_info_traffic</item>
+        <item>@string/tag_around_info_show_all</item>
+    </string-array>
+    <string-array name="assume_strong_biometrics_models">
+        <item>Pixel 4</item>
+        <item>Pixel 4 XL</item>
+    </string-array>
+    <array name="com_google_android_gms_fonts_certs">
+        <item>@array/com_google_android_gms_fonts_certs_dev</item>
+        <item>@array/com_google_android_gms_fonts_certs_prod</item>
+    </array>
+    <string-array name="com_google_android_gms_fonts_certs_dev">
+        <item>MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPWW+wPPKQmsHxajtWjmQwWfna8mZuSeJS48LIgAZlKkpFeVyxW0qMBujb8X8ETrWy550NaFtI6t9+u7hZeTfHwqNvacKhp1RbE6dBRGWynwMVX8XW8N1+UjFaq6GCJukT4qmpN2afb8sCjUigq0GuMwYXrFVee74bQgLHWGJwPmvmLHC69EH6kWr22ijx4OKXlSIx2xT1AsSHee70w5iDBiK4aph27yH3TxkXy9V89TDdexAcKk/cVHYNnDBapcavl7y0RiQ4biu8ymM8Ga/nmzhRKya6G0cGw8CAQOjgfwwgfkwHQYDVR0OBBYEFI0cxb6VTEM8YYY6FbBMvAPyT+CyMIHJBgNVHSMEgcEwgb6AFI0cxb6VTEM8YYY6FbBMvAPyT+CyoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JMrSu1xuTKEBahWRbqHsXclaXjoBADb0kkjVEJu/Lh5hgYZnOjvlba8Ld7HCKePCVePoTJBdI4fvugnL8TsgK05aIskyY0hKI9L8KfqfGTl1lzOv2KoWD0KWwtAWPoGChZxmQ+nBli+gwYMzM1vAkP+aayLe0a1EQimlOalO762r0GXO0ks+UeXde2Z4e+8S/pf7pITEI/tP+MxJTALw9QUWEv9lKTk+jkbqxbsh8nfBUapfKqYn0eidpwq2AzVp3juYl7//fKnaPhJD9gs=</item>
+    </string-array>
+    <string-array name="com_google_android_gms_fonts_certs_prod">
+        <item>MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JORland2qSGT2y5b+3JKkedxiLDmpHpDsz2WCbdxgxRczfey5YZnTJ4VZbH0xqWVW/8lGmPav5xVwnIiJS6HXk+BVKZF+JcWjAsb/GEuq/eFdpuzSqeYTcfi6idkyugwfYwXFU1+5fZKUaRKYCwkkFQVfcAs1fXA5V+++FGfvjJ/CxURaSxaBvGdGDhfXE28LWuT9ozCl5xw4Yq5OGazvV24mZVSoOO0yZ31j7kYvtwYK6NeADwbSxDdJEqO4k//0zOHKrUiGYXtqw/A0LFFtqoZKFjnkCAQOjgdkwgdYwHQYDVR0OBBYEFMd9jMIhF1Ylmn/Tgt9r45jk14alMIGmBgNVHSMEgZ4wgZuAFMd9jMIhF1Ylmn/Tgt9r45jk14aloXikdjB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWSCCQDC4IdGZEowjTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4IBAQBt0lLO74UwLDYKqs6Tm8/yzKkEu116FmH4rkaymUIE0P9KaMftGlMexFlaYjzmB2OxZyl6euNXEsQH8gjwyxCUKRJNexBiGcCEyj6z+a1fuHHvkiaai+KL8W1EyNmgjmyy8AW7P+LLlkR+ho5zEHatRbM/YAnqGcFh5iZBqpknHf1SKMXFh4dd239FJ1jWYfbMDMy3NS5CTMQ2XFI1MvcyUTdZPErjQfTbQe3aDQsQcafEQPD+nqActifKZ0Np0IS9L9kR/wbNvyz6ENwPiTrjV2KRkEjH78ZMcUQXg0L3BYHJ3lc69Vs5Ddf9uUGGMYldX3WfMBEmh/9iFBDAaTCK</item>
+    </string-array>
+    <string-array name="common_order_str">
+        <item>첫번째</item>
+        <item>두번째</item>
+        <item>세번째</item>
+    </string-array>
+    <array name="crypto_fingerprint_fallback_prefixes" />
+    <string-array name="crypto_fingerprint_fallback_vendors">
+        <item>samsung</item>
+    </string-array>
+    <string-array name="delay_showing_prompt_models">
+        <item>Pixel 4</item>
+        <item>Pixel 4 XL</item>
+    </string-array>
+    <string-array name="exo_controls_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>Normal</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </string-array>
+    <string-array name="hide_fingerprint_instantly_prefixes">
+        <item>SM-A50</item>
+        <item>SM-G973</item>
+        <item>SM-G975</item>
+        <item>SM-G977</item>
+        <item>SM-G770</item>
+        <item>SM-N970</item>
+        <item>SM-N971</item>
+        <item>SM-N975</item>
+        <item>SM-N976</item>
+        <item>SM-N770</item>
+        <item>SC-03L</item>
+        <item>SC-04L</item>
+        <item>SC-05L</item>
+        <item>SC-01M</item>
+        <item>SCV41</item>
+        <item>SCV42</item>
+        <item>SCV45</item>
+    </string-array>
+    <string-array name="highway_warning_start_point_list">
+        <item>1km</item>
+        <item>600m</item>
+        <item>300m</item>
+    </string-array>
+    <string-array name="hosts_allowlist_sample">
+        <item>fdb00c43dbde8b51cb312aa81d3b5fa17713adb94b28f598d77f8eb89daceedf, com.google.android.projection.gearhead</item>
+        <item>70811a3eacfd2e83e18da9bfede52df16ce91f2e69a44d21f18ab66991130771, com.google.android.projection.gearhead</item>
+        <item>1975b2f17177bc89a5dff31f9e64a6cae281a53dc1d1d59b1d147fe1c82afa00, com.google.android.projection.gearhead</item>
+        <item>c241ffbc8e287c4e9a4ad19632ba1b1351ad361d5177b7d7b29859bd2b7fc631, com.google.android.apps.automotive.templates.host</item>
+        <item>dd66deaf312d8daec7adbe85a218ecc8c64f3b152f9b5998d5b29300c2623f61, com.google.android.apps.automotive.templates.host</item>
+        <item>50e603d333c6049a37bd751375d08f3bd0abebd33facd30bd17b64b89658b421, com.google.android.apps.automotive.templates.host</item>
+    </string-array>
+    <integer-array name="map_main_effective_region_offset">
+        <item>30</item>
+        <item>135</item>
+        <item>30</item>
+        <item>160</item>
+    </integer-array>
+    <integer-array name="map_navi_effective_region_offset">
+        <item>30</item>
+        <item>160</item>
+        <item>30</item>
+        <item>50</item>
+    </integer-array>
+    <integer-array name="map_route_guidance_effective_region_offset">
+        <item>30</item>
+        <item>40</item>
+        <item>30</item>
+        <item>160</item>
+    </integer-array>
+    <integer-array name="map_search_effective_region_offset">
+        <item>30</item>
+        <item>50</item>
+        <item>30</item>
+        <item>30</item>
+    </integer-array>
+    <integer-array name="map_search_result_effective_region_offset">
+        <item>30</item>
+        <item>95</item>
+        <item>30</item>
+        <item>160</item>
+    </integer-array>
+    <integer-array name="map_walk_effective_region_offset">
+        <item>30</item>
+        <item>55</item>
+        <item>30</item>
+        <item>30</item>
+    </integer-array>
+    <string-array name="normal_warning_start_point_list">
+        <item>600m</item>
+        <item>300m</item>
+    </string-array>
+    <string-array name="setting_blackbox_capacity_size">
+        <item>@string/blackbox_capacity_2gb</item>
+        <item>@string/blackbox_capacity_4gb</item>
+        <item>@string/blackbox_capacity_6gb</item>
+        <item>@string/blackbox_capacity_8gb</item>
+        <item>@string/blackbox_capacity_percent</item>
+    </string-array>
+    <string-array name="setting_blackbox_quality">
+        <item>@string/blackbox_quality_normal</item>
+        <item>@string/blackbox_quality_high</item>
+        <item>@string/blackbox_quality_max_high</item>
+    </string-array>
+    <string-array name="setting_blackbox_storage_location">
+        <item>@string/blackbox_internal_memory</item>
+        <item>@string/blackbox_external_memory</item>
+    </string-array>
+    <string-array name="setting_car_type">
+        <item>@string/setting_main_carinfo_small_car</item>
+        <item>@string/setting_main_carinfo_normal_car</item>
+        <item>@string/setting_main_carinfo_midsize_van</item>
+        <item>@string/setting_main_carinfo_bigsize_van</item>
+        <item>@string/setting_main_carinfo_bigsize_truck</item>
+        <item>@string/setting_main_carinfo_special_truck</item>
+    </string-array>
+    <string-array name="setting_car_type_value">
+        <item>@string/setting_main_carinfo_small_car_name</item>
+        <item>@string/setting_main_carinfo_normal_car_name</item>
+        <item>@string/setting_main_carinfo_midsize_van_name</item>
+        <item>@string/setting_main_carinfo_bigsize_van_name</item>
+        <item>@string/setting_main_carinfo_bigsize_truck_name</item>
+        <item>@string/setting_main_carinfo_special_truck_name</item>
+    </string-array>
+    <string-array name="setting_common_use">
+        <item>@string/str_tmap_common_use</item>
+        <item>@string/str_tmap_common_no_use</item>
+    </string-array>
+    <string-array name="setting_common_use_value">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+    <string-array name="setting_default_music_service">
+        <item>@string/txt_setting_flo</item>
+        <item>@string/txt_setting_melon</item>
+        <item>@string/txt_setting_bugs</item>
+    </string-array>
+    <string-array name="setting_default_music_service_value">
+        <item>1</item>
+        <item>0</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="setting_int_list_2_value">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="setting_int_list_3_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="setting_int_list_4_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="setting_int_list_5_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="setting_main_display_poi_fontsize_choices">
+        <item>작게</item>
+        <item>보통</item>
+        <item>크게</item>
+    </string-array>
+    <string-array name="setting_main_display_poi_fontsize_choices_value">
+        <item>SMALL</item>
+        <item>NORMAL</item>
+        <item>LARGE</item>
+    </string-array>
+    <string-array name="setting_main_junction_image_type_list">
+        <item>크게</item>
+        <item>작게</item>
+    </string-array>
+    <string-array name="setting_main_junction_image_type_list_value">
+        <item>FULL</item>
+        <item>POPUP</item>
+    </string-array>
+    <string-array name="setting_oil_type">
+        <item>@string/setting_main_carinfo_oilarr1</item>
+        <item>@string/setting_main_carinfo_oilarr5</item>
+        <item>@string/setting_main_carinfo_oilarr2</item>
+        <item>@string/setting_main_carinfo_oilarr3</item>
+        <item>@string/setting_main_carinfo_oilarr4</item>
+    </string-array>
+    <string-array name="setting_oil_type_value">
+        <item>FT_GAS</item>
+        <item>FT_GASPM</item>
+        <item>FT_DIESEL</item>
+        <item>FT_LPG</item>
+        <item>FT_EV</item>
+    </string-array>
+    <string-array name="setting_screen_address_type">
+        <item>@string/tmap_main_setting_item_screen_address_type_road</item>
+        <item>@string/tmap_main_setting_item_screen_address_type_jibun</item>
+    </string-array>
+    <string-array name="setting_screen_address_type_value">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="setting_screen_night_mode">
+        <item>@string/str_tmap_common_auto</item>
+        <item>@string/str_tmap_common_always_use</item>
+        <item>@string/str_tmap_common_no_use</item>
+    </string-array>
+    <string-array name="setting_screen_night_mode_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="setting_sdi_sound_level_kr">
+        <item>@string/str_setting_safe_drive_warning_sound_level_big</item>
+        <item>@string/str_setting_safe_drive_warning_sound_level_normal</item>
+        <item>@string/str_setting_safe_drive_warning_sound_level_small</item>
+        <item>@string/str_setting_safe_drive_warning_sound_level_mute</item>
+    </string-array>
+    <string-array name="setting_sdi_sound_level_value">
+        <item>8</item>
+        <item>5</item>
+        <item>3</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="setting_value_string_yn_type">
+        <item>Y</item>
+        <item>N</item>
+    </string-array>
+    <string-array name="setting_wakeup_keyword">
+        <item>@string/aria_keyword</item>
+        <item>@string/tinkerbell_keyword</item>
+    </string-array>
+    <string-array name="setting_wakeup_keyword_index">
+        <item>1</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="setting_wakeup_keyword_value">
+        <item>@string/aria_keyword_value</item>
+        <item>@string/tinkerbell_keyword_value</item>
+    </string-array>
+    <string-array name="sound_safe_drive_minimum_mode">
+        <item>@string/setting_main_sound_safe_drive_guide_minimum_mode</item>
+        <item></item>
+    </string-array>
+    <string-array name="tts_make_phone_call">
+        <item>&lt;skml domain=\"phone\">&lt;sk_name>%s&lt;/sk_name>에게 전화를 걸게요.&lt;/skml></item>
+        <item>&lt;skml domain=\"phone\">&lt;sk_name>%s&lt;/sk_name>에게 전화 할게요.&lt;/skml></item>
+    </string-array>
+    <string-array name="tts_make_phone_call_last_four_digits">
+        <item>&lt;skml domain=\"phone\">%s번으로, 전화를 걸게요.&lt;/skml></item>
+        <item>&lt;skml domain=\"phone\">%s번으로, 전화 할게요.&lt;/skml></item>
+    </string-array>
+    <string-array name="warning_condition_list">
+        <item>단속 속도 초과 시</item>
+        <item>단속 속도 5% 이상</item>
+        <item>단속 속도 10% 이상</item>
+    </string-array>
+    <string-array name="warning_condition_list_value">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+    </string-array>
+</resources>

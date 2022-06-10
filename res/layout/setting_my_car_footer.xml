@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@drawable/white_gradation" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_20dp" />
+    <FrameLayout android:background="@color/white_color" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/white_color" android:gravity="center" android:id="@id/btn_car_management" android:background="@drawable/navi_blue_button_selector" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_52dp" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_marginRight="@dimen/tmap_20dp" android:layout_marginBottom="@dimen/tmap_20dp" android:text="@string/car_management" android:layout_centerInParent="true" android:lineSpacingExtra="7.0sp" android:fontFamily="@font/skp_go_mm" />
+    </FrameLayout>
+</LinearLayout>

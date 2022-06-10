@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="bottom" android:background="@android:color/transparent" android:paddingBottom="@dimen/tmap_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/bluetooth_connection_info_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_48dp" android:layout_marginBottom="@dimen/tmap_9dp">
+        <ImageView android:background="@drawable/ico_bluetooth" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/color_ffffff" android:ellipsize="end" android:gravity="center|left" android:id="@id/bluetooth_connection_info_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_7dp" android:text="" android:maxLines="1" />
+        <ImageView android:id="@id/bluetooth_connection_info_help" android:background="@drawable/ico_info_bluetooth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_7dp" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/ai_volume_media_text_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/bluetooth_connection_info_layout">
+        <TextView android:textSize="@dimen/tmap_19dp" android:textColor="@color/white_color" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_15dp" android:text="@string/tmap_setting_sound" android:maxLines="1" android:layout_weight="1.0" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ai_volume_auto_control" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_15dp">
+            <CheckBox android:id="@id/ai_volume_auto_checkbox" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/ai_volume_check_selector" />
+            <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/white_color" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_7dp" android:text="@string/ai_volume_auto_setting_string" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/ai_volume_media_seek_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_14dp" android:layout_below="@id/ai_volume_media_text_layout">
+        <ImageView android:id="@id/ai_volume_media_min" android:layout_width="@dimen/tmap_19dp" android:layout_height="@dimen/tmap_21dp" android:src="@drawable/ai_volume_mute_selector" />
+        <ImageView android:id="@id/ai_volume_media_max" android:layout_width="@dimen/tmap_19dp" android:layout_height="@dimen/tmap_21dp" android:src="@drawable/ai_volume_on_selector" android:layout_alignParentRight="true" />
+        <SeekBar android:id="@id/ai_volume_media_seekbar" android:paddingLeft="@dimen/tmap_7dp" android:paddingRight="@dimen/tmap_7dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/ai_volume_media_max" android:layout_toRightOf="@id/ai_volume_media_min" style="@style/AiSeekBar" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/tmap_19dp" android:textColor="@color/white_color" android:id="@id/ai_volume_tmap_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_24dp" android:text="@string/tmap_setting_sound_tmap" android:layout_below="@id/ai_volume_media_seek_layout" />
+    <RelativeLayout android:id="@id/ai_volume_tmap_seek_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_14dp" android:layout_below="@id/ai_volume_tmap_text">
+        <ImageView android:id="@id/ai_volume_tmap_min" android:layout_width="@dimen/tmap_19dp" android:layout_height="@dimen/tmap_21dp" android:src="@drawable/ai_volume_mute_selector" />
+        <ImageView android:id="@id/ai_volume_tmap_max" android:layout_width="@dimen/tmap_19dp" android:layout_height="@dimen/tmap_21dp" android:src="@drawable/ai_volume_on_selector" android:layout_alignParentRight="true" />
+        <SeekBar android:id="@id/ai_volume_tmap_seekbar" android:paddingLeft="@dimen/tmap_7dp" android:paddingRight="@dimen/tmap_7dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/ai_volume_tmap_max" android:layout_toRightOf="@id/ai_volume_tmap_min" style="@style/AiSeekBar" />
+    </RelativeLayout>
+</RelativeLayout>

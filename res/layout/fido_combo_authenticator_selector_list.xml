@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/fido_combo_authenticator_icon" android:layout_width="@android:dimen/app_icon_size" android:layout_height="@android:dimen/app_icon_size" android:layout_marginLeft="25.0dip" android:adjustViewBounds="true" />
+    <TextView android:id="@id/fido_combo_authenticator_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="16.0dip" android:layout_toRightOf="@id/fido_combo_authenticator_icon" />
+    <TextView android:textColor="@color/material_grey_600" android:ellipsize="end" android:id="@id/authenticator_desc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="16.0dip" android:maxLines="2" android:layout_toRightOf="@id/fido_combo_authenticator_icon" android:layout_below="@id/fido_combo_authenticator_title" />
+</RelativeLayout>

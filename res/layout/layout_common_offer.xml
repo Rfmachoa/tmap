@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clickable="true" android:layout_width="360.0dip" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:moment="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@drawable/img_popup_bg_white" android:paddingLeft="30.0dip" android:paddingTop="25.0dip" android:paddingRight="30.0dip" android:paddingBottom="25.0dip" android:layout_width="fill_parent" android:layout_height="185.0dip">
+        <LinearLayout android:orientation="horizontal" android:id="@id/offer_contents" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.skt.moment.widget.RewardView android:layout_gravity="center" android:id="@id/offer_reward" android:layout_width="80.0dip" android:layout_height="80.0dip" moment:backImage="@drawable/img_popup_icon_bg_01" moment:foreImage="@drawable/img_popup_icon_bg_02" />
+            <FrameLayout android:layout_gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip">
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.skt.moment.widget.MmtTextView android:id="@id/offer_fail_title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/banner_network_fail_title" style="@style/BannerTitle" />
+                    <com.skt.moment.widget.MmtTextView android:id="@id/offer_fail_message" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/banner_network_fail_message" style="@style/BannerMessage" />
+                </LinearLayout>
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.skt.moment.widget.MmtTextView android:id="@id/offer_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="스트레스 날려줄 이벤트" style="@style/BannerTitle" />
+                    <com.skt.moment.widget.MmtTextView android:id="@id/offer_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="잠깐 시간이 있다면 [로멘틱] 지옥형 황소 내쫓기 게임 참여하고 바로 선물 받으실래요?" style="@style/BannerMessage" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="15.0dip" android:layout_below="@id/offer_contents" android:layout_centerHorizontal="true">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.skt.moment.widget.MmtButton android:enabled="false" android:id="@id/offer_fail_cancel" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/banner_network_fail_cancel" android:layout_weight="1.0" style="@style/BannerGreyButton" />
+                <com.skt.moment.widget.MmtButton android:enabled="false" android:id="@id/offer_fail_ok" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:text="@string/banner_network_fail_ok" android:layout_weight="1.0" style="@style/BannerGradientButton" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.skt.moment.widget.MmtButton android:id="@id/offer_cancel" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="[정색하며] 아니" android:layout_weight="1.0" style="@style/BannerGreyButton" />
+                <com.skt.moment.widget.MmtButton android:id="@id/offer_ok" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:text="[기분좋게] 고고!" android:layout_weight="1.0" style="@style/BannerGradientButton" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+    <ImageView android:layout_gravity="right" android:id="@id/offer_close" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/selector_btn_popup_x_01" />
+</FrameLayout>

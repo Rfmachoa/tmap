@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/parent_layout" android:tag="layout/grid_item_view_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/grid_poi_item_view" />
+    <RelativeLayout android:tag="binding_1" android:background="@drawable/grid_view_background" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_88dp">
+        <ImageView android:id="@id/home_office_item_icon" android:tag="binding_2" android:layout_width="@dimen/tmap_24dp" android:layout_height="@dimen/tmap_24dp" android:layout_marginTop="@dimen/tmap_14dp" android:layout_marginRight="@dimen/tmap_15dp" android:layout_alignParentRight="true" />
+        <TextView android:textSize="@dimen/tmap_19dp" android:textColor="@color/color_000000" android:ellipsize="end" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_13dp" android:layout_marginTop="@dimen/tmap_15dp" android:layout_marginRight="@dimen/tmap_12dp" android:includeFontPadding="true" android:layout_toLeftOf="@id/home_office_item_icon" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_13dp" android:layout_marginBottom="@dimen/tmap_12dp" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/color_0064ff" android:tag="binding_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_1dp" android:fontFamily="@font/skt_tmap_500" />
+            <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/color_0064ff" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/tmap_3dp" android:text="@string/str_tmap_common_hour" android:fontFamily="@font/skt_tmap_500" />
+            <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/color_0064ff" android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_1dp" android:fontFamily="@font/skt_tmap_500" />
+            <TextView android:textSize="@dimen/tmap_16dp" android:textColor="@color/color_0064ff" android:tag="binding_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_tmap_common_minute" android:fontFamily="@font/skt_tmap_500" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:tag="binding_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_13dp" android:layout_marginBottom="@dimen/tmap_14dp" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_000000" android:ellipsize="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_0.5dp" android:layout_marginRight="@dimen/tmap_4dp" android:text="@string/str_add" android:maxLines="1" android:fontFamily="@font/skt_tmap_300" />
+            <ImageView android:layout_width="@dimen/tmap_18dp" android:layout_height="@dimen/tmap_18dp" android:src="@drawable/ic_icon_add" />
+        </LinearLayout>
+    </RelativeLayout>
+    <com.skt.tmap.view.RoundedRelativeLayout android:id="@id/coupon_layout" android:tag="binding_9" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_56dp" app:backgroundFillColor="@color/color_f7f7f9" app:cornerRadius="@dimen/tmap_4dp">
+        <ImageView android:id="@id/coupon_item_icon" android:tag="binding_10" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_56dp" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+    </com.skt.tmap.view.RoundedRelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/empty_layout" android:tag="binding_11" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_main_tile_height">
+        <ImageView android:layout_width="@dimen/tmap_18dp" android:layout_height="@dimen/tmap_22dp" android:src="@drawable/ic_icon_poi" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/favorite_plus_layout" android:tag="binding_12" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_main_tile_height">
+        <ImageView android:layout_width="@dimen/tmap_19dp" android:layout_height="@dimen/tmap_18dp" android:src="@drawable/ic_favorite_add" android:scaleType="fitXY" />
+    </RelativeLayout>
+</FrameLayout>

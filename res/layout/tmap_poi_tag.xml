@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="layout/tmap_poi_tag_0" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_20dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_20dp" android:src="@drawable/charger_fast" />
+    <TextView android:textSize="@dimen/tmap_11dp" android:gravity="center_vertical" android:tag="binding_2" android:background="@color/color_56a0e4" android:paddingLeft="@dimen/tmap_5dp" android:paddingRight="@dimen/tmap_5dp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/tmap_2dp" android:fontFamily="@font/skp_go_bm" />
+    <ImageView android:tag="binding_3" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_20dp" android:src="@drawable/charger_slow" />
+    <TextView android:textSize="@dimen/tmap_11dp" android:gravity="center_vertical" android:tag="binding_4" android:background="@color/color_2cc64c" android:paddingLeft="@dimen/tmap_5dp" android:paddingRight="@dimen/tmap_5dp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="@dimen/tmap_2dp" android:fontFamily="@font/skp_go_bm" />
+    <ImageView android:tag="binding_5" android:src="@drawable/elem_tagstick_closed" style="@style/tmap_poi_tag_image" />
+    <ImageView android:tag="binding_6" android:src="@drawable/elem_tagstick_lowestprice" style="@style/tmap_poi_tag_image" />
+    <ImageView android:tag="binding_7" android:src="@drawable/icon_tagstick_tmap_oil" style="@style/tmap_poi_tag_image" />
+    <ImageView android:tag="binding_8" android:src="@drawable/icon_tagstick_tmap_popularity_2" style="@style/tmap_poi_tag_image" />
+    <ImageView android:tag="binding_9" android:src="@drawable/icon_tagstick_tmap_parking" style="@style/tmap_poi_tag_image" />
+    <ImageView android:tag="binding_10" android:src="@drawable/elem_tagstick_nearest" style="@style/tmap_poi_tag_image" />
+    <ImageView android:tag="binding_11" android:src="@drawable/elem_tagstick_park_available" style="@style/tmap_poi_tag_image" />
+    <TextView android:gravity="center_vertical" android:tag="binding_12" android:layout_width="wrap_content" android:layout_height="fill_parent" android:fontFamily="@font/skp_go_bm" style="@style/tmap_poi_tag_text" />
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:tag="layout/route_preview_summary_item_0" android:background="@drawable/tmap_route_guidance_list_bg" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_route_list_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:tag="binding_1" android:background="@color/color_f6f6f6" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_route_list_item_height">
+        <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_3673ee" android:layout_gravity="center_vertical" android:tag="binding_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tag_aboveall_normalroad" android:fontFamily="@font/skp_go_bm" />
+        <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_808080" android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/route_option_not_use_normal_road" android:lineSpacingExtra="4.0sp" android:fontFamily="@font/skp_go_mm" />
+    </LinearLayout>
+    <include android:id="@id/tmap_route_summary_item_view" layout="@layout/route_summary_item" />
+    <View android:layout_gravity="bottom" android:tag="binding_3" android:background="@drawable/recyclerview_line_divider" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_1dp" />
+</FrameLayout>

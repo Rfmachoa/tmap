@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference android:title="@string/setting_push_noti_category_advertisement" android:key="@string/setting_push_noti_category" app:isTextViewDivider="false">
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/setting_push_noti_push" android:key="@string/set_notice_update_info" android:defaultValue="true" app:clickLogActionId="tap.push" app:groupName="@string/tmap_setting_update_version" app:isPreferenceValueType="@string/boolean_type" app:isTextViewDivider="false" />
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/setting_push_noti_sms" android:key="@string/set_sms_notice_update_info" android:defaultValue="true" app:clickLogActionId="tap.sms" app:groupName="@string/tmap_setting_update_version" app:isPreferenceValueType="@string/boolean_type" />
+    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+    <com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+        <com.skt.tmap.setting.fragment.customPreference.CustomSwitchPreference android:title="@string/tmap_main_setting_receive_benefit" android:key="@string/receive_personal_moment_info" android:defaultValue="true" app:clickLogActionId="tap.benefit" app:groupName="@string/tmap_setting_update_version" app:isPreferenceValueType="@string/boolean_type" />
+    </com.skt.tmap.setting.fragment.customPreference.CustomCategoryPreference>
+</PreferenceScreen>

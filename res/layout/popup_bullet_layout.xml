@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_width="@dimen/tmap_14dp" android:layout_height="@dimen/tmap_14dp" android:src="@drawable/bul_dot_popup" />
+    <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_737373" android:id="@id/bullet_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="@dimen/tmap_5dp" />
+</LinearLayout>

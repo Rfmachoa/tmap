@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/color_ffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_layout_text">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/adaptive_icon_tmap" />
+    </LinearLayout>
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/splash_view" android:layout_width="fill_parent" android:layout_height="fill_parent" app:lottie_autoPlay="true" app:lottie_fileName="splash_land.json" app:lottie_loop="false" />
+    <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_6f6f6f" android:gravity="center_horizontal" android:id="@id/bottom_layout_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_48dp" android:layout_marginRight="@dimen/tmap_48dp" android:layout_marginBottom="@dimen/tmap_30dp" android:text="@string/intro_text" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:lineSpacingExtra="@dimen/tmap_6dp" android:fontFamily="@font/skp_go_mm" />
+</RelativeLayout>

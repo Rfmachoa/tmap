@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@id/pickup_marker" android:layout_width="wrap_content" android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/pickup_order_bg" android:layout_width="@dimen/tmap_25dp" android:layout_height="@dimen/tmap_35dp" android:src="@drawable/marker_pin_arrival_poi" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <ImageView android:id="@id/pickup_icon" android:clickable="true" android:layout_width="@dimen/tmap_23dp" android:layout_height="@dimen/tmap_23dp" android:layout_marginLeft="@dimen/tmap_1dp" android:layout_marginTop="@dimen/tmap_1dp" android:layout_marginRight="@dimen/tmap_1dp" android:src="@drawable/img_poi_pickup" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

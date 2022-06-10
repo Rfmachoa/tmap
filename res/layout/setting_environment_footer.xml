@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/setting_footer_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="bottom|center" android:orientation="vertical" android:id="@id/layoutSettingFooter" android:paddingTop="@dimen/tmap_60dp" android:paddingBottom="@dimen/tmap_60dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:paddingBottom="@dimen/tmap_15dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/setting_footer_text_color" android:id="@id/textViewNotice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tmap_menu_reference" />
+            <View android:layout_gravity="center_vertical" android:background="@color/setting_footer_divider_color" android:layout_width="@dimen/tmap_1dp" android:layout_height="@dimen/tmap_12dp" android:layout_marginLeft="@dimen/tmap_8dp" android:layout_marginRight="@dimen/tmap_8dp" />
+            <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/setting_footer_text_color" android:id="@id/textViewTermsAndConditions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tmap_menu_terms_and_conditions" />
+            <View android:layout_gravity="center_vertical" android:background="@color/setting_footer_divider_color" android:layout_width="@dimen/tmap_1dp" android:layout_height="@dimen/tmap_12dp" android:layout_marginLeft="@dimen/tmap_8dp" android:layout_marginRight="@dimen/tmap_8dp" />
+            <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/setting_footer_text_color" android:id="@id/textViewUserInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tmap_menu_user_info" />
+            <View android:layout_gravity="center_vertical" android:background="@color/setting_footer_divider_color" android:layout_width="@dimen/tmap_1dp" android:layout_height="@dimen/tmap_12dp" android:layout_marginLeft="@dimen/tmap_8dp" android:layout_marginRight="@dimen/tmap_8dp" />
+            <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/setting_footer_text_color" android:id="@id/textViewCopyrightInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tmap_menu_copyright_info" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:id="@id/textViewSettingReset" android:paddingTop="@dimen/tmap_15dp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="@dimen/tmap_15dp" android:layout_height="@dimen/tmap_15dp" android:layout_marginRight="@dimen/tmap_8dp" android:src="@drawable/ic_icn_refresh" />
+            <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/setting_footer_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_main_reset" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

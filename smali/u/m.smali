@@ -1,0 +1,117 @@
+.class public Lu/m;
+.super Ljava/lang/Object;
+.source "SamsungPreviewTargetAspectRatioQuirk.java"
+
+# interfaces
+.implements Lx/a1;
+
+
+# static fields
+.field public static final a:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 2
+
+    const-string v0, "SM-J710MN"
+
+    const-string v1, "SM-T580"
+
+    .line 1
+    filled-new-array {v0, v1}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lu/m;->a:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static a()Z
+    .locals 2
+
+    .line 1
+    sget-object v0, Landroid/os/Build;->BRAND:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "SAMSUNG"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lu/m;->a:Ljava/util/List;
+
+    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    .line 2
+    invoke-virtual {v1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+
+# virtual methods
+.method public b(Landroidx/camera/core/impl/Config;)Z
+    .locals 0
+    .param p1    # Landroidx/camera/core/impl/Config;
+        .annotation build Landroidx/annotation/NonNull;
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x0
+        }
+        names = {
+            "config"
+        }
+    .end annotation
+
+    .line 1
+    instance-of p1, p1, Landroidx/camera/core/impl/p;
+
+    return p1
+.end method

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/tmap_common_title_bg_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/qm_sf_layout_title" android:background="@color/tmap_common_title_bg_color" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_common_title_height">
+        <ImageButton android:id="@id/qm_sf_imagebutton_back" android:background="@null" android:layout_width="@dimen/tmap_main_menu_btn_width" android:layout_height="@dimen/tmap_main_menu_btn_height" android:layout_marginLeft="@dimen/tmap_main_menu_btn_margin_left" android:src="@drawable/btn_backpress_selector" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/tmap_common_title_txt_size" android:textColor="@color/tmap_common_title_txt_color" android:gravity="center" android:id="@id/qm_fd_textview_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/search_favorite" android:singleLine="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ListView android:id="@id/qm_fd_listview" android:background="@color/white_color" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/tmap_common_list_divider_color" android:dividerHeight="@dimen/tmap_1dp" android:layout_below="@id/qm_sf_layout_title" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/qm_fd_textview_nonedata" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="@dimen/tmap_18dp" android:textColor="@color/color_000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_tmap_search_no_result_poi" />
+        <TextView android:textSize="@dimen/tmap_14dp" android:textColor="@color/color_8c8c8c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_14dp" android:text="@string/str_tmap_search_no_result_poi_detail" android:lineSpacingExtra="@dimen/tmap_6dp" android:textAlignment="center" />
+    </LinearLayout>
+</RelativeLayout>

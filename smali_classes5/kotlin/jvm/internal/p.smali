@@ -1,0 +1,140 @@
+.class public final Lkotlin/jvm/internal/p;
+.super Ljava/lang/Object;
+.source "PrimitiveCompanionObjects.kt"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0010\u000c\n\u0002\u0008\u0014\n\u0002\u0010\u0008\n\u0002\u0008\t\u0008\u00c0\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u001f\u0010\u0006R\u001a\u0010\u0007\u001a\u00020\u00028\u0006X\u0087T\u00a2\u0006\u000c\n\u0004\u0008\u0003\u0010\u0004\u0012\u0004\u0008\u0005\u0010\u0006R\u001a\u0010\n\u001a\u00020\u00028\u0006X\u0087T\u00a2\u0006\u000c\n\u0004\u0008\u0008\u0010\u0004\u0012\u0004\u0008\t\u0010\u0006R\u0014\u0010\u000c\u001a\u00020\u00028\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u000b\u0010\u0004R\u0014\u0010\u000e\u001a\u00020\u00028\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\r\u0010\u0004R\u0014\u0010\u0010\u001a\u00020\u00028\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u000f\u0010\u0004R\u0014\u0010\u0012\u001a\u00020\u00028\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0011\u0010\u0004R\u0014\u0010\u0014\u001a\u00020\u00028\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0013\u0010\u0004R\u0014\u0010\u0016\u001a\u00020\u00028\u0006X\u0086T\u00a2\u0006\u0006\n\u0004\u0008\u0015\u0010\u0004R\u001a\u0010\u001b\u001a\u00020\u00178\u0006X\u0087T\u00a2\u0006\u000c\n\u0004\u0008\u0018\u0010\u0019\u0012\u0004\u0008\u001a\u0010\u0006R\u001a\u0010\u001e\u001a\u00020\u00178\u0006X\u0087T\u00a2\u0006\u000c\n\u0004\u0008\u001c\u0010\u0019\u0012\u0004\u0008\u001d\u0010\u0006\u00a8\u0006 "
+    }
+    d2 = {
+        "Lkotlin/jvm/internal/p;",
+        "",
+        "",
+        "a",
+        "C",
+        "getMIN_VALUE$annotations",
+        "()V",
+        "MIN_VALUE",
+        "b",
+        "getMAX_VALUE$annotations",
+        "MAX_VALUE",
+        "c",
+        "MIN_HIGH_SURROGATE",
+        "d",
+        "MAX_HIGH_SURROGATE",
+        "e",
+        "MIN_LOW_SURROGATE",
+        "f",
+        "MAX_LOW_SURROGATE",
+        "g",
+        "MIN_SURROGATE",
+        "h",
+        "MAX_SURROGATE",
+        "",
+        "i",
+        "I",
+        "getSIZE_BYTES$annotations",
+        "SIZE_BYTES",
+        "j",
+        "getSIZE_BITS$annotations",
+        "SIZE_BITS",
+        "<init>",
+        "kotlin-stdlib"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x5,
+        0x1
+    }
+.end annotation
+
+
+# static fields
+.field public static final a:C = '\u0000'
+
+.field public static final b:C = '\uffff'
+
+.field public static final c:C = '\ud800'
+
+.field public static final d:C = '\udbff'
+
+.field public static final e:C = '\udc00'
+
+.field public static final f:C = '\udfff'
+
+.field public static final g:C = '\ud800'
+
+.field public static final h:C = '\udfff'
+
+.field public static final i:I = 0x2
+
+.field public static final j:I = 0x10
+
+.field public static final k:Lkotlin/jvm/internal/p;
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 1
+    new-instance v0, Lkotlin/jvm/internal/p;
+
+    invoke-direct {v0}, Lkotlin/jvm/internal/p;-><init>()V
+
+    sput-object v0, Lkotlin/jvm/internal/p;->k:Lkotlin/jvm/internal/p;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static synthetic a()V
+    .locals 0
+    .annotation build Lkotlin/SinceKotlin;
+        version = "1.3"
+    .end annotation
+
+    return-void
+.end method
+
+.method public static synthetic b()V
+    .locals 0
+    .annotation build Lkotlin/SinceKotlin;
+        version = "1.3"
+    .end annotation
+
+    return-void
+.end method
+
+.method public static synthetic c()V
+    .locals 0
+    .annotation build Lkotlin/SinceKotlin;
+        version = "1.3"
+    .end annotation
+
+    return-void
+.end method
+
+.method public static synthetic d()V
+    .locals 0
+    .annotation build Lkotlin/SinceKotlin;
+        version = "1.3"
+    .end annotation
+
+    return-void
+.end method

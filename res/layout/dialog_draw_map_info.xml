@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/bg_popup_box" android:paddingLeft="@dimen/tmap_10dp" android:paddingTop="@dimen/tmap_8dp" android:paddingRight="@dimen/tmap_10dp" android:paddingBottom="@dimen/tmap_13dp" android:layout_width="@dimen/tmap_332dp" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" style="@style/popup_scrollbar_style">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_000000" android:gravity="center_vertical" android:id="@id/dlgMapInfoTitleTV" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_59dp" android:layout_marginLeft="@dimen/tmap_20dp" android:text="@string/map_info_title_txt" />
+                <View android:layout_gravity="center_horizontal" android:id="@id/dlg_draw_map_info_divider" android:background="@color/color_dbdbdb" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:id="@id/dlgMapInfoTrafficLayout" android:background="@drawable/popup_list_selector" android:paddingLeft="@dimen/tmap_30dp" android:paddingRight="@dimen/tmap_30dp" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_59dp">
+                        <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_000000" android:gravity="center_vertical" android:id="@id/dlgMapInfoTrafficTv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/map_info_traffic_info_txt" />
+                        <CheckBox android:id="@id/dlgMapInfoTrafficCheckbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/selector_checkbox" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                    <View android:background="@color/color_dbdbdb" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                    <RelativeLayout android:id="@id/dlgMapInfoFavoriteLayout" android:background="@drawable/popup_list_selector" android:paddingLeft="@dimen/tmap_30dp" android:paddingRight="@dimen/tmap_30dp" android:layout_width="wrap_content" android:layout_height="@dimen/tmap_59dp">
+                        <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_000000" android:gravity="center_vertical" android:id="@id/dlgMapInfoFavoriteTv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/map_info_favorite_txt" />
+                        <CheckBox android:id="@id/dlgMapInfoFavoriteCheckbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/selector_checkbox" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                    <View android:background="@color/color_dbdbdb" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                    <RelativeLayout android:id="@id/dlgMapInfoRecentlyDesLayout" android:background="@drawable/popup_list_selector" android:paddingLeft="@dimen/tmap_30dp" android:paddingRight="@dimen/tmap_30dp" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_59dp">
+                        <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_000000" android:gravity="center_vertical" android:id="@id/dlgMapInfoRecentlyDesTv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/map_info_recent_des_txt" />
+                        <CheckBox android:id="@id/dlgMapInfoRecentlyDesCheckbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/selector_checkbox" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:orientation="horizontal" android:id="@id/button_container" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_50dp">
+            <TextView android:textSize="@dimen/tmap_common_popup_dialog_btn_text_size" android:textColor="@color/tmap_common_popup_button_color" android:gravity="center" android:id="@id/left_button" android:background="@drawable/btn_popup_left_selector" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:text="@string/popup_btn_no" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/tmap_common_popup_dialog_btn_text_size" android:textColor="@color/tmap_common_popup_button_color" android:gravity="center" android:id="@id/right_button" android:background="@drawable/btn_popup_right_selector" android:layout_width="@dimen/tmap_0dp" android:layout_height="fill_parent" android:text="@string/popup_btn_yes" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

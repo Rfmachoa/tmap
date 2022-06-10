@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:tag="layout/route_preview_favorite_item_0" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/tmap_favorite_route_root_layout" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_0dp">
+        <ImageView android:layout_gravity="top" android:tag="binding_2" android:background="@drawable/list_route_bg" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_0dp" />
+        <LinearLayout android:layout_gravity="top" android:orientation="vertical" android:id="@id/tmap_favorite_route_item_layout" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_vertical" android:id="@id/tmap_favorite_route_auto_view" android:tag="binding_4" android:background="@color/color_f7faff" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_route_serach_auto_view_height">
+                <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/black_color" android:tag="binding_5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="@font/skp_go_bm" />
+                <ImageView android:tag="binding_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_5dp" android:layout_marginBottom="2.0dip" android:src="@drawable/icon_beta" />
+                <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_808080" android:gravity="end|bottom|center" android:tag="binding_7" android:layout_width="@dimen/tmap_0dp" android:layout_height="wrap_content" android:layout_marginRight="@dimen/tmap_11dp" android:drawableRight="@drawable/icon_btn_add_route" android:drawablePadding="@dimen/tmap_6dp" android:layout_weight="1.0" android:fontFamily="@font/skp_go_mm" />
+            </LinearLayout>
+            <include android:id="@id/tmap_favorite_route_item_view" layout="@layout/route_summary_item" />
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@id/bottom_content_handle_ayout" android:tag="binding_8" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_26dp">
+        <View android:background="@drawable/bottom_sheet_white_background" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_26dp" />
+        <View android:layout_gravity="center" android:id="@id/bottom_content_handle" android:background="@drawable/bottom_sheet_handle_background" android:layout_width="@dimen/tmap_38dp" android:layout_height="@dimen/tmap_5dp" android:layout_marginTop="@dimen/tmap_10dp" />
+    </FrameLayout>
+    <View android:layout_gravity="bottom" android:tag="binding_9" android:background="@drawable/recyclerview_line_divider" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_1dp" />
+</LinearLayout>

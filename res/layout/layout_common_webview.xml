@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:clickable="true" android:layout_width="360.0dip" android:layout_height="476.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/webview_contents" android:background="@drawable/img_popup_bg_card_white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/webview_header" android:background="@drawable/img_popup_header_gradient" android:paddingTop="13.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <RelativeLayout android:id="@id/webview_body" android:paddingLeft="13.0dip" android:paddingRight="13.0dip" android:paddingBottom="21.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/webview_header">
+            <WebView android:id="@id/webview_browser" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </RelativeLayout>
+        <ImageView android:id="@id/webview_close" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:src="@drawable/selector_btn_popup_x_02" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rollup_card" android:background="@drawable/img_popup_bg_card_white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/rollup_header" android:background="@drawable/img_popup_bg_gradient_01" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="263.0dip" />
+        <FrameLayout android:id="@id/rolldown_header" android:background="@drawable/img_popup_bg_gradient_01" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/map_ev_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.skt.tmap.mapview.streaming.MapViewStreaming android:id="@id/mapView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/map_ev_button" layout="@layout/map_ev_button_layout" />
+    <FrameLayout android:orientation="vertical" android:id="@id/bottom_sheet_callout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:behavior_fitToContents="true" app:behavior_hideable="true" app:behavior_peekHeight="230.0dip" app:layout_behavior="com.skt.tmap.view.TmapBottomSheetBehavior" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

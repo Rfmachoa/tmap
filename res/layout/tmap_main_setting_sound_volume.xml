@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/main_setting_gr_v_layout_main" android:background="@drawable/tmap_common_list_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/titlebarLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tmap_common_titlebar" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/titlebarLayout">
+        <RelativeLayout android:id="@id/layout_device_sound" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/tmap_35dp">
+            <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_000000" android:id="@id/tmap_setting_sound_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_marginBottom="@dimen/tmap_15dp" android:text="@string/tmap_setting_sound" android:fontFamily="@font/skp_go_mm" />
+            <TextView android:textSize="@dimen/tmap_13dp" android:textColor="@color/color_3673ee" android:id="@id/tmap_setting_sound_volume" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:layout_below="@id/tmap_setting_sound_title" android:fontFamily="@font/skp_go_mm" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tmap_setting_sound_volume">
+                <ImageView android:id="@id/tmap_setting_sound_min" android:layout_width="@dimen/tmap_30dp" android:layout_height="@dimen/tmap_30dp" android:layout_marginLeft="@dimen/tmap_30dp" android:src="@drawable/btn_sound_off" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/tmap_setting_sound_max" android:layout_width="@dimen/tmap_30dp" android:layout_height="@dimen/tmap_30dp" android:layout_marginRight="@dimen/tmap_30dp" android:src="@drawable/btn_sound_on" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <SeekBar android:id="@id/tmap_setting_sound_seekbar" android:paddingLeft="@dimen/tmap_10dp" android:paddingRight="@dimen/tmap_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/tmap_setting_sound_max" android:layout_toRightOf="@id/tmap_setting_sound_min" style="@style/CustSeekBar" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/layout_tmap_sound" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/layout_device_sound">
+            <TextView android:textSize="@dimen/tmap_17dp" android:textColor="@color/color_000000" android:id="@id/tmap_setting_sound_tmap_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/tmap_20dp" android:layout_marginTop="@dimen/tmap_50dp" android:layout_marginBottom="@dimen/tmap_15dp" android:text="@string/tmap_setting_sound_tmap" android:fontFamily="@font/skp_go_mm" />
+            <TextView android:textSize="@dimen/tmap_13dp" android:textColor="@color/color_3673ee" android:id="@id/tmap_setting_sound_tmap_volume" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:layout_below="@id/tmap_setting_sound_tmap_title" android:fontFamily="@font/skp_go_mm" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tmap_setting_sound_tmap_volume">
+                <ImageView android:id="@id/tmap_setting_sound_tmap_min" android:layout_width="@dimen/tmap_30dp" android:layout_height="@dimen/tmap_30dp" android:layout_marginLeft="@dimen/tmap_30dp" android:src="@drawable/btn_sound_off" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/tmap_setting_sound_tmap_max" android:layout_width="@dimen/tmap_30dp" android:layout_height="@dimen/tmap_30dp" android:layout_marginRight="@dimen/tmap_30dp" android:src="@drawable/btn_sound_on" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <SeekBar android:id="@id/tmap_setting_sound_tmap_seekbar" android:paddingLeft="@dimen/tmap_10dp" android:paddingRight="@dimen/tmap_10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/tmap_setting_sound_tmap_max" android:layout_toRightOf="@id/tmap_setting_sound_tmap_min" style="@style/CustSeekBar" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/layout_tmap_sound">
+            <ImageView android:id="@id/tmap_setting_sound_test_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_volume_test_selector" />
+            <TextView android:textSize="@dimen/tmap_15dp" android:textColor="@color/color_b5b5b5" android:id="@id/tmap_setting_sound_test_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tmap_setting_sound_test" android:fontFamily="@font/skp_go_mm" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/header_shadow" android:background="@drawable/bg_sheet_shadow" android:layout_width="fill_parent" android:layout_height="@dimen/tmap_7dp" android:layout_below="@id/titlebarLayout" />
+</RelativeLayout>

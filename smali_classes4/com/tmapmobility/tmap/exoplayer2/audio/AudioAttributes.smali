@@ -1,0 +1,540 @@
+.class public final Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;
+.super Ljava/lang/Object;
+.source "AudioAttributes.java"
+
+# interfaces
+.implements Lcom/tmapmobility/tmap/exoplayer2/h;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$c;,
+        Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$b;,
+        Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$FieldNumber;,
+        Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;
+    }
+.end annotation
+
+
+# static fields
+.field public static final g:Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;
+
+.field public static final h:I = 0x0
+
+.field public static final i:I = 0x1
+
+.field public static final j:I = 0x2
+
+.field public static final k:I = 0x3
+
+.field public static final l:I = 0x4
+
+.field public static final p:Lcom/tmapmobility/tmap/exoplayer2/h$a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/tmapmobility/tmap/exoplayer2/h$a<",
+            "Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public f:Landroid/media/AudioAttributes;
+    .annotation build Landroidx/annotation/Nullable;
+    .end annotation
+.end field
+
+
+# direct methods
+.method public static constructor <clinit>()V
+    .locals 1
+
+    .line 1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;-><init>()V
+
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;->a()Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->g:Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;
+
+    .line 2
+    sget-object v0, Lcom/tmapmobility/tmap/exoplayer2/audio/b;->a:Lcom/tmapmobility/tmap/exoplayer2/audio/b;
+
+    sput-object v0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->p:Lcom/tmapmobility/tmap/exoplayer2/h$a;
+
+    return-void
+.end method
+
+.method public constructor <init>(IIIII)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput p1, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->a:I
+
+    .line 4
+    iput p2, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->b:I
+
+    .line 5
+    iput p3, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c:I
+
+    .line 6
+    iput p4, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->d:I
+
+    .line 7
+    iput p5, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->e:I
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(IIIIILcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$a;)V
+    .locals 0
+
+    .line 1
+    invoke-direct/range {p0 .. p5}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;-><init>(IIIII)V
+
+    return-void
+.end method
+
+.method public static synthetic a(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;
+    .locals 0
+
+    invoke-static {p0}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->d(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(I)Ljava/lang/String;
+    .locals 1
+
+    const/16 v0, 0x24
+
+    .line 1
+    invoke-static {p0, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static synthetic d(Landroid/os/Bundle;)Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;
+    .locals 3
+
+    .line 1
+    new-instance v0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;
+
+    invoke-direct {v0}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;-><init>()V
+
+    const/4 v1, 0x0
+
+    .line 2
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 3
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;->c(I)Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;
+
+    :cond_0
+    const/4 v1, 0x1
+
+    .line 4
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 5
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;->d(I)Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;
+
+    :cond_1
+    const/4 v1, 0x2
+
+    .line 6
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 7
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;->f(I)Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;
+
+    :cond_2
+    const/4 v1, 0x3
+
+    .line 8
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    .line 9
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;->b(I)Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;
+
+    :cond_3
+    const/4 v1, 0x4
+
+    .line 10
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    .line 11
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result p0
+
+    .line 12
+    invoke-virtual {v0, p0}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;->e(I)Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;
+
+    .line 13
+    :cond_4
+    invoke-virtual {v0}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$d;->a()Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public b()Landroid/media/AudioAttributes;
+    .locals 3
+    .annotation build Landroidx/annotation/RequiresApi;
+        value = 0x15
+    .end annotation
+
+    .line 1
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->f:Landroid/media/AudioAttributes;
+
+    if-nez v0, :cond_2
+
+    .line 2
+    new-instance v0, Landroid/media/AudioAttributes$Builder;
+
+    invoke-direct {v0}, Landroid/media/AudioAttributes$Builder;-><init>()V
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->a:I
+
+    .line 3
+    invoke-virtual {v0, v1}, Landroid/media/AudioAttributes$Builder;->setContentType(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->b:I
+
+    .line 4
+    invoke-virtual {v0, v1}, Landroid/media/AudioAttributes$Builder;->setFlags(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c:I
+
+    .line 5
+    invoke-virtual {v0, v1}, Landroid/media/AudioAttributes$Builder;->setUsage(I)Landroid/media/AudioAttributes$Builder;
+
+    move-result-object v0
+
+    .line 6
+    sget v1, Lcom/tmapmobility/tmap/exoplayer2/util/m0;->a:I
+
+    const/16 v2, 0x1d
+
+    if-lt v1, v2, :cond_0
+
+    .line 7
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->d:I
+
+    invoke-static {v0, v2}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$b;->a(Landroid/media/AudioAttributes$Builder;I)V
+
+    :cond_0
+    const/16 v2, 0x20
+
+    if-lt v1, v2, :cond_1
+
+    .line 8
+    iget v1, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->e:I
+
+    invoke-static {v0, v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes$c;->a(Landroid/media/AudioAttributes$Builder;I)V
+
+    .line 9
+    :cond_1
+    invoke-virtual {v0}, Landroid/media/AudioAttributes$Builder;->build()Landroid/media/AudioAttributes;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->f:Landroid/media/AudioAttributes;
+
+    .line 10
+    :cond_2
+    iget-object v0, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->f:Landroid/media/AudioAttributes;
+
+    return-object v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
+    .param p1    # Ljava/lang/Object;
+        .annotation build Landroidx/annotation/Nullable;
+        .end annotation
+    .end param
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_3
+
+    .line 1
+    const-class v2, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_1
+
+    .line 2
+    :cond_1
+    check-cast p1, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;
+
+    .line 3
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->a:I
+
+    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->a:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->b:I
+
+    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->b:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c:I
+
+    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->d:I
+
+    iget v3, p1, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->d:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->e:I
+
+    iget p1, p1, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->e:I
+
+    if-ne v2, p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move v0, v1
+
+    :goto_0
+    return v0
+
+    :cond_3
+    :goto_1
+    return v1
+.end method
+
+.method public hashCode()I
+    .locals 2
+
+    .line 1
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->a:I
+
+    const/16 v1, 0x20f
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 2
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->b:I
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 3
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c:I
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 4
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->d:I
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    .line 5
+    iget v0, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->e:I
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public toBundle()Landroid/os/Bundle;
+    .locals 3
+
+    .line 1
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    const/4 v1, 0x0
+
+    .line 2
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->a:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    const/4 v1, 0x1
+
+    .line 3
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->b:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    const/4 v1, 0x2
+
+    .line 4
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    const/4 v1, 0x3
+
+    .line 5
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->d:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    const/4 v1, 0x4
+
+    .line 6
+    invoke-static {v1}, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->c(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget v2, p0, Lcom/tmapmobility/tmap/exoplayer2/audio/AudioAttributes;->e:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    return-object v0
+.end method
