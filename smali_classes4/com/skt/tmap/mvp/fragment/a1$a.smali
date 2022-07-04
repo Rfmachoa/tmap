@@ -58,9 +58,11 @@
     .end annotation
 
     .line 1
+
     iget v0, p0, Lcom/skt/tmap/mvp/fragment/a1$a;->e:I
 
     const/4 v1, 0x1
+
 
     if-ne v0, v1, :cond_0
 
@@ -90,8 +92,17 @@
 
     move-result p1
 
+    const v0,0x1
+    if-gt p1, v0, :cond_2
+    return p1
+
+    :cond_2
+
+    const p1,0x3
+
     return p1
 
     :cond_1
+
     return v1
 .end method
