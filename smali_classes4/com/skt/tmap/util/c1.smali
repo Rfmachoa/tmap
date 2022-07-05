@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static a:Z = false
+.field public static a:Z = true
 
 
 # direct methods
@@ -333,6 +333,7 @@
     .end annotation
 
     .line 1
+    const p0,0x1
     sput-boolean p0, Lcom/skt/tmap/util/c1;->a:Z
 
     return-void
