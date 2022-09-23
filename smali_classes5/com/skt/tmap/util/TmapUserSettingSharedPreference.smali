@@ -303,6 +303,12 @@
 
     move-result-object p0
 
+    const-string v0,"feature.nuguStartChatWithCallName"
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v0
+    if-eqz v0, :cond_a
+    const-string p2,"N"
+    :cond_a
     .line 3
     invoke-interface {p0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
